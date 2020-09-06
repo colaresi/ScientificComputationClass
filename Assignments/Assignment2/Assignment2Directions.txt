@@ -1,0 +1,47 @@
+#Weekly Assignment 2
+
+For the first two questions below: Imagine you had a computer that devoted 8 bits of memory to storing numbers.  The memory is ordered such that 00000000 represents zero, and 00000001 represents 1, and 00000010 represents 2, etc
+
+1) What is the biggest integer value (in base 10) that the computer could hold? Hint, if you devoted 1 bit to storing numbers, the biggest integer that could be stored is 1, with 2 bits the highest integer)
+
+2) In order to add binary numbers, you just add in columns (1's place, 2's place, 4's place, etc) and carry to the next value (analogously to base ten).
+
+11 (which in binary is 1011) + 2 (which in binary is (0010) is
+ 1011
++0010 
+----------------
+ 1101
+
+Notice how in the second column, we cannot have 1+1 = 2 because 2 does not exist as a digit in binary! So we carry to the next column (just like in base 10, the number 10 does not exist as a digit, it is 2 digits! a 1 in the 10s place and a 0 in the 1s place).
+
+Our binary addition given us (2^3)+(2^2)+(2^0) = 8+4+1=13
+
+Notice there is no 10^2 because that bit/place is turned off (a zero)
+
+Imagine you wanted to add 64, which is represented as 01000000 and 192 represented as 11000000. First, calculate the correct answer in binary. Use as many bits as you need to get the correct answer.
+
+ 01000000
++11000000
+----------
+
+Then simulate what would happen if your computer that had 8 bits to store numbers tried to make this calculation... what answer would the computer output to you? Remember the computer would just be flipping bits to add column by column too.
+
+
+3) When using computers for calculations, why is it a problem if we multiply or square very small numbers or very large numbers?
+
+
+4) What is the one line of commands that you can enter in zsh or bash that will write out/save to a file named lineCounts.out the number of lines included in each file that has a .csv extension at the end of its name?
+
+5) If a computer has the following file directory structure: /Users/me/Projects/Project1/Projection/Code/CodeBase/CodeZsh
+All directories are empty except of the subdirectories that are noted in the structure above.
+If you see someone enter the commands, without any errors:
+ls ../..
+cd Project*
+cd Code*
+cd ../../..
+pwd
+
+a) what is the output of the first ls command?
+b) what is the output of the last pwd command
+
+

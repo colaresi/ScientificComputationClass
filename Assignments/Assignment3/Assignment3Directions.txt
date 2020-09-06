@@ -1,0 +1,28 @@
+#Assignment 3
+Directions
+
+Write a shell script, where the file is named Assignment3.sh, for bash or zsh (it does not matter which).
+The script must accept a white space separated list of integers as arguments (after the command, such as ./Assignment3.sh 1 5 15 22).
+For each item in the list, the script must check whether the integer is divisible by 3, 5, or both 3 and 5 (so 15).
+If the number is divisible by 3, then print "fizz".
+If the number is divisible by 5, then print "buzz".
+If the number is divisible by 15, then print "fizzybuzzy".
+If the number is not divisible by 3 or 5, then print the number.
+
+Try to use the shebang "#!/usr/bin/env zsh" or "#!/usr/bin/env bash", although you might have to change that for your system.
+
+Turn in the script, again named Assignment3.sh, with no formatting, by uploading it to canvas. I will run the scripts in my shell on a test suite of integer lists to decide on your grade.
+
+Hint 1:
+To check if a number is divisible by 9, you would use the modulo operator "%" and check whether the result was equal to 0 or not.
+For example, if we were checking an integer stored in the variable num, we would write $num%9==0.
+
+Hint 2: 
+To get the first argument passed to a command/script we use "$1", to get the second argument we use "$2". To get all of the arguments passed to a script we use "$@". 
+
+Hint 3:
+To evaluate math expressions, place them between two parentheses, for example ((2+4)), and yes, modulo is math.
+
+Hint 4:
+elif will help
+

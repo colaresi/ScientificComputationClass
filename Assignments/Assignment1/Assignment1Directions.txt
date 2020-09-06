@@ -1,0 +1,13 @@
+Assignment 1
+
+—> Type these four lines into our CLI (the shell should be either zsh or bash), pressing enter after each. Replace YOUR_NAME with ... your name in quotes.
+
+
+0. echo YOUR_NAME > checkInstall.md
+1. echo “My shell says: Hello World” >> checkInstall.md
+2. which python >> checkInstall.md
+3. python -c "print('Python says: Hello World')" | tee -a checkInstall.md
+
+
+Then turn in the file checkInstall.md within canvas
+
