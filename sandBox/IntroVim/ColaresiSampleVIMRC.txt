@@ -1,0 +1,77 @@
+"MPC basic vimrc
+"built on from  alvin alexander's sample .vimrc file
+
+" --- configure syntax highlighting ---
+
+" possible cterm colors:
+" black, blue, cyan, gray, green, magenta, red, white, yellow
+
+" possible cterm, gui, and term settings:
+" bold, underline, reverse, italic, none
+
+" possible Groups and Colors are shown on this page:
+" http://vimdoc.sourceforge.net/htmldoc/syntax.html
+
+colo delek
+
+
+" --- other vim configuration commands ---
+
+" enable syntax highlighting
+syntax on
+
+" python indentation, from files
+filetype indent plugin on
+
+" show the editing mode on the last line
+set showmode
+
+" tell vim to keep a backup file
+set backup
+
+" tell vim where to put its backup files
+set backupdir=/private/tmp
+
+" tell vim where to put swap files
+set dir=/private/tmp
+
+
+"--- common vim commands i don't use
+
+" i don't use autoindent, but here's how to configure it:
+" set autoindent
+
+" you can show line numbers
+set number relativenumber
+
+" highlight matching search strings
+set hlsearch
+
+" make searches case insensitive
+" set ignorecase
+
+" vim-airline settings, setting 256 color, font, and theme
+set t_Co=256
+let g:airline_powerline_fonts = 1
+let g:airline_theme='molokai'
+
+
+" ALE
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '.'
+let g:ale_linters = {
+      \   'python': ['flake8', 'pylint', 'pylint'],
+      \   'markdown': ['mdl'],
+      \   '~R': ['lintr'],
+      \   'sh': ['shellcheck'],
+      \}
+
+" Put these lines at the very end of your vimrc file.
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL

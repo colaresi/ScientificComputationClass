@@ -1,0 +1,53 @@
+<h1 id="simple-markdown-how-to-guide">Simple Markdown how to guide</h1>
+<p>This will walk you through creating your first markdown document.</p>
+<p><strong>Markdown</strong> is a useful format for:</p>
+<ul>
+<li>readMe files</li>
+<li>creating websites</li>
+<li>notes</li>
+<li>even academic papers (with extentions)</li>
+</ul>
+<p>It is so useful that it has been incorporated into:</p>
+<ul>
+<li>github: where markdown files are shown as html</li>
+<li>jupyter notebooks: where cells can be written in markdown</li>
+<li>r markdown: R studio team’s version of jupyter notebooks</li>
+</ul>
+<p>Further, there are extensions that allow for:</p>
+<ul>
+<li>math (eg check out mathjax)</li>
+<li>tables (check out github-flavored markdown)</li>
+<li>yaml headers and external meta data (check out pandoc)</li>
+</ul>
+<h2 id="writing-the-markdown-script">Writing the markdown script</h2>
+<p>You write markdown in plain text, so vim, atom, sublime text, etc are great places to write markdown.</p>
+<p>After writing or copying over the markdown file (like this one you are currently reading), you will need a parser, to translate the markup like the atx headings, bold, etc into html tags.</p>
+<h2 id="downloading-a-parser">Downloading a parser</h2>
+<p>There are many different parsers that read markdown files and produce html output. We will talk about two. The original perl parser and the pandoc implementation.</p>
+<h3 id="the-original-markdown-parser">The original markdown parser</h3>
+<p>The story of markdown is an interesting one and a triumph for open standards. You can read about it <a href="https://daringfireball.net/projects/markdown/">here</a> <a href="https://en.wikipedia.org/wiki/Markdown">here</a>.</p>
+<p>The original parser is written in perl, which you should have installed on your system. You can download it <a href="https://daringfireball.net/projects/downloads/Markdown_1.0.1.zip">here</a>.</p>
+<p>In your home directory you can download the file at the command line with:</p>
+<pre><code>curl -O https://daringfireball.net/projects/downloads/Markdown_1.0.1.zip </code></pre>
+<p>Sidenote: <code>curl</code> is a useful tool, if you do not already have it you should get it, see <a href="https://curl.haxx.se">this website</a>, but just download curl from a CLI package manager like homebrew.</p>
+<p>You should also have an unzip command to uncompress the files</p>
+<pre><code>unzip Markdown_1.0.1.zip</code></pre>
+<p>This will uncompress a directory that has witin it a <code>Markdown.pl</code> file, this is the perl script that takes as an argument the markdown file to parse, and outputs html.</p>
+<p>A command like this</p>
+<pre><code>perl ./Markdown_1.0.1/Markdown.pl yourFirstMarkdownDocument.md | tee yourFirstMarkdownDocument.html</code></pre>
+<p>will parse this document. The command makes a few assumptions, so you might have to change some paths. First, I am assuming that you downloaded the <code>Markdown_1.0.1.zip</code> file into the pwd, and that is where you unzipped it. Second, I am assumint that you have this markdown file in the pwd.</p>
+<p>If you have everything (and perl) you should be able to <code>ls</code> and see the output, you can then open the <code>yourFirstMarkdownDocument.html</code> in a browser (on a mac you can just type <code>open ...</code>, with the … replaced by the file name you want to open.</p>
+<h3 id="using-pandoc">Using pandoc</h3>
+<p>Pandoc is discussed in the slides, so I will not go too indepth here. There is a great deal of information online, see <a href="https://pandoc.org/MANUAL.html%20for%20the%20user%20guide">here</a>.</p>
+<p>Follow the directions to install pandoc that are appropriate for your operating system, see <a href="https://pandoc.org/installing.html">this page</a></p>
+<pre><code>pandoc yourFirstMarkdownDocument.md -f markdown -t html -o yourFirstMarkdownDocument2.html</code></pre>
+<p>Pandoc has many, many extensions and options so this is a bare bones simple command.</p>
+<ul>
+<li>The <code>-f</code> flag says that we are going from some file type (here markdown).</li>
+<li>The <code>-t</code> flag says we are going to some other file type (here html).</li>
+<li>The <code>-o</code> flag defines the output path and name</li>
+</ul>
+<p>You should get a similar, but often not identical html file.</p>
+<h2 id="extensions">Extensions</h2>
+<p>See the pandoc markdown extensions list <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">here</a>.</p>
+<p>Since html is often the target, it is also useful to know about mathjax usage in pandoc markdown described <a href="https://pandoc.org/MANUAL.html#math-rendering-in-html">here</a>.</p>

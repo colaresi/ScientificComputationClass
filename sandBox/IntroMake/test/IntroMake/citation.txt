@@ -1,0 +1,5 @@
+---  # data citation
+author--> "Kerry, Ken"
+title--> "The data"
+year--> 2005
+url--> "data.html"

@@ -1,0 +1,79 @@
+---  # sequence
+- Week 1
+- Week 2
+- Week 3
+- Week 4
+
+---  # sequence in "flow" format
+[Week 1, Week 2, Week 3, Week 4]
+
+---  # scalar to scalar map
+teacher: mpc
+semester: fall
+year: 2020
+
+---  # scalar to sequence map
+dependencies:
+  - python3
+  - bash
+  - vim
+
+osList:
+  - mac
+  - wsl
+  - linux flavors
+
+---  # scalar to sequence map in "flow" format
+{dependencies: [python3, bash, vim],
+ osList: [mac, wsl, linux flavors]}
+
+---  # seq of seq (not recommended)
+- - install
+  - questions
+- - zsh
+  - bash
+- - scripting
+  - grep
+
+---  # often better to have documents made up of maps
+id: 1
+name: topic 1
+topics:
+  - install
+  - questions
+
+---  # notice the new document here with the dashes
+id: 2
+name: topic 2
+topics:
+  - zsh
+  - bash
+
+---
+id: 3
+name: topic 3
+topics:
+  - scripting
+  - grep
+
+
+---  # you can also include long test
+id: 4
+name: topic 4
+topics: |
+        much to complicated to discuss
+        in just a few words. These
+        tools are poetry.
+
+---  # more useful example
+linters:
+  python:
+    - flake8
+    - pylint
+    - mypy
+  markdown:
+    - mdl
+  yaml:
+    - yamllint
+  bash:
+    - shellcheck

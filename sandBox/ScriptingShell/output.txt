@@ -1,6 +1,0 @@
-code1.csv is code
-code2.csv is code
-code3.csv is code
-data1.csv is data
-data2.csv is data
-dattta.csv is not data or code, CHECK THIS
