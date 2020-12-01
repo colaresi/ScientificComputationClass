@@ -21,3 +21,4 @@ Order of sandbox activities
 13. TypeHinting
 14. IntroComputingMath
 15. IntroSciPyStack
+16. DataMungingPandas
